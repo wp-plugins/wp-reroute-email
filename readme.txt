@@ -3,7 +3,7 @@ Contributors: msh134
 Tags: mail
 Requires at least: 2.2.3
 Tested up to: 3.4.2
-Stable tag: 1.00
+Stable tag: 1.0.0
 License: GPLv2 or later
 
 This plugin reroutes all outgoing emails from a WordPress site (sent using the wp_mail() function) to a predefined configurable email address.
