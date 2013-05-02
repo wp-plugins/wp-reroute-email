@@ -20,11 +20,3 @@ Any issue? Contact me (http://sajjadhossain.com/contact-me/).
 1. Upload `wp-reroute-email` folder to the plugins directory (`/wp-content/plugins/`).
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 3. Go to Settings > WP Reroute Email settings page and modify the settings.
-
-== Frequently Asked Questions ==
-
-== Changelog ==
-
-== Upgrade Notice ==
-
-== Screenshots ==
