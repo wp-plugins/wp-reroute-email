@@ -1,8 +1,8 @@
 === WP Reroute Email ===
 Contributors: msh134
-Tags: mail
+Tags: mail, email
 Requires at least: 2.2.3
-Tested up to: 3.4.2
+Tested up to: 3.5.1
 Stable tag: 1.0.0
 License: GPLv2 or later
 
