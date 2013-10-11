@@ -3,7 +3,7 @@ Contributors: msh134
 Tags: mail, email, developer tool
 Requires at least: 2.2.3
 Tested up to: 3.6.1
-Stable tag: 1.0.1
+Stable tag: 1.1.0
 License: GPLv2 or later
 
 This plugin reroutes all outgoing emails from a WordPress site (sent using the wp_mail() function) to a predefined configurable email address.
@@ -22,5 +22,8 @@ Any issue? Contact me (http://sajjadhossain.com/contact-me/).
 3. Go to Settings > WP Reroute Email settings page and modify the settings.
 
 == Changelog ==
+= 1.1.0 =
+* Added option for appending text with message.
+
 = 1.0.1 =
 * Changed permission of the settings menu.
