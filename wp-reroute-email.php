@@ -3,7 +3,7 @@
 Plugin Name: WP Reroute Email
 Plugin URI: http://wordpress.org/extend/plugins/wp-reroute-email/
 Description: This plugin intercepts all outgoing emails from a WordPress site and reroutes them to a predefined configurable email address.
-Version: 1.0.0
+Version: 1.0.1
 Author: msh134
 Author URI: http://www.sajjadhossain.com
 */
@@ -34,7 +34,7 @@ class WPRerouteEmail{
      * Add a submenu for settings page under Settings menu
      */
     public function add_admin_menu(){
-        add_submenu_page('options-general.php', __('WP Reroute Email', 'wp_reroute_email'),__('WP Reroute Email', 'wp_reroute_email'), 2, 'wp-reroute-email/settings.php');
+        add_submenu_page('options-general.php', __('WP Reroute Email', 'wp_reroute_email'),__('WP Reroute Email', 'wp_reroute_email'), 'manage_options', 'wp-reroute-email/settings.php');
     }
 
     /**
