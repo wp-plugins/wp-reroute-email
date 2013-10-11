@@ -3,7 +3,7 @@
 Plugin Name: WP Reroute Email
 Plugin URI: http://wordpress.org/extend/plugins/wp-reroute-email/
 Description: This plugin intercepts all outgoing emails from a WordPress site and reroutes them to a predefined configurable email address.
-Version: 1.0.1
+Version: 1.1.0
 Author: msh134
 Author URI: http://www.sajjadhossain.com
 */
@@ -25,9 +25,13 @@ class WPRerouteEmail{
         add_action('admin_menu', array($this, 'add_admin_menu'));
         add_action('phpmailer_init', array($this, 'modify_phpmailer_object'), 1000, 1);
     }
-	
+
+	/**
+     * Adds filters
+     */
 	private function add_filters(){
 		add_filter( 'plugin_action_links', array($this, 'add_settings_link'), 10, 2);
+		add_filter( 'wp_mail', array($this, 'modify_mail_message'), 1000, 1);
 	}
 
     /**
@@ -39,7 +43,7 @@ class WPRerouteEmail{
 
     /**
      * Unsets all recipient addresses from PHPMailer object and adds emails address to which all mails will be rerouted.
-     * 
+     *
      * @param object $phpmailer
      */
     public function modify_phpmailer_object($phpmailer){
@@ -56,17 +60,38 @@ class WPRerouteEmail{
             }
         }
     }
-	
-	/**
+
+    /**
+     * Append given text with the mail message.
+     *
+     * @param array $mail_parts
+     */
+    public function modify_mail_message($mail_parts){
+        $append_msg = get_option('wp_reroute_email_message_to_append', '');
+
+        if($append_msg){
+            if(!empty($mail_parts['message']) && strstr($mail_parts['message'], '</body>') !== FALSE){
+                $mail_parts['message'] = str_replace('</body>', $append_msg . '</body>', $mail_parts['message']);
+            }
+            else{
+                $mail_parts['message'] .= "\r\n\r\n$append_msg";
+            }
+        }
+
+        return $mail_parts;
+    }
+
+
+    /**
 	 * Add a settings link to the Plugins page
 	 *
 	 * @param array $links
 	 * @param string $file
-	 * 
+	 *
 	 * @return array
 	 */
 	public function add_settings_link( $links, $file ){
-		
+
 		if(is_null($this->plugin_name)){
 			$this->plugin_name = plugin_basename(__FILE__);
 		}
