@@ -1,6 +1,7 @@
 <?php
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $enable = !empty($_POST['enable_reroute']) ? 1 : 0;
+        $append_recipient = !empty($_POST['append_recipient']) ? 1 : 0;
         $email = !empty($_POST['email_address']) ? $_POST['email_address'] : '';
         $append_msg = !empty($_POST['append_msg']) ? $_POST['append_msg'] : '';
 
@@ -13,6 +14,7 @@
 
         if(!$error){
             update_option('wp_reroute_email_enable', $enable);
+            update_option('wp_reroute_append_recipient', $append_recipient);
             update_option('wp_reroute_email_address', $email);
             update_option('wp_reroute_email_message_to_append', $append_msg);
             print '<div id="message" class="updated fade"><p>'. __('Settings saved.', 'wp_reroute_email') . '</p></div>';
@@ -20,6 +22,7 @@
     }
     else{
         $enable = get_option('wp_reroute_email_enable', 0);
+        $append_recipient = get_option('wp_reroute_append_recipient', 0);
         $email = get_option('wp_reroute_email_address', '');
         $append_msg = get_option('wp_reroute_email_message_to_append', '');
     }
@@ -49,6 +52,13 @@
                     <td>
                         <input type="text" name="append_msg" size="60" value="<?php print $append_msg; ?>">
                         <br><span class="description">This text will be appended with the mail body. Leave it blank if you do not want to append anything.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Append recipient email addresses</th>
+                    <td>
+                        <input type="checkbox" <?php print $append_recipient ? 'checked="checked"' : ''; ?> value="1" name="append_recipient">
+                        <br><span class="description">Check this box if you want to append recipient email addresses at the bottom of the mail.</span>
                     </td>
                 </tr>
             </tbody>

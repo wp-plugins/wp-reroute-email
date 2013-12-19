@@ -3,8 +3,8 @@
 Plugin Name: WP Reroute Email
 Plugin URI: http://wordpress.org/extend/plugins/wp-reroute-email/
 Description: This plugin intercepts all outgoing emails from a WordPress site and reroutes them to a predefined configurable email address.
-Version: 1.1.0
-Author: msh134
+Version: 1.2.0
+Author: Sajjad Hossain
 Author URI: http://www.sajjadhossain.com
 */
 
@@ -68,13 +68,49 @@ class WPRerouteEmail{
      */
     public function modify_mail_message($mail_parts){
         $append_msg = get_option('wp_reroute_email_message_to_append', '');
+        $append_recipient = get_option('wp_reroute_append_recipient', '');
 
-        if($append_msg){
-            if(!empty($mail_parts['message']) && strstr($mail_parts['message'], '</body>') !== FALSE){
+        $is_html = !empty($mail_parts['message']) && strstr($mail_parts['message'], '</body>') !== FALSE;
+
+        $recipients = '';
+
+        if($append_recipient){
+            if(is_array($mail_parts['to'])){
+                $recipients = implode(', ', $mail_parts['to']);
+            }
+            else{
+                $recipients = $mail_parts['to'];
+            }
+        }
+
+        if($append_msg && $append_recipient){
+            if($is_html){
+                $append_msg .= '<br><br><hr>' . $recipients;
+                $mail_parts['message'] = str_replace('</body>', $append_msg . '</body>', $mail_parts['message']);
+            }
+            else{
+                $mail_parts['message'] .= "\r\n\r\n$append_msg
+                        \r\n\r\n
+                        ====================================================\r\n
+                        Sent To: $recipients";
+            }
+        }
+        else if($append_msg){
+            if($is_html){
                 $mail_parts['message'] = str_replace('</body>', $append_msg . '</body>', $mail_parts['message']);
             }
             else{
                 $mail_parts['message'] .= "\r\n\r\n$append_msg";
+            }
+        }
+        else if($append_recipient){
+            if($is_html){
+                $mail_parts['message'] = str_replace('</body>', '<br><br><hr>' . $recipients . '</body>', $mail_parts['message']);
+            }
+            else{
+                $mail_parts['message'] .= "\r\n\r\n
+                        ====================================================\r\n
+                        Sent To: $recipients";
             }
         }
 
