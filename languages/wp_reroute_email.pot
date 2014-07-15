@@ -1,0 +1,55 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Panth Dev <info@panth.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Enter at least one email address."
+msgstr ""
+
+msgid "Settings saved."
+msgstr ""
+
+msgid "WP Reroute Email Settings"
+msgstr ""
+
+msgid "Enable rerouting"
+msgstr ""
+
+msgid ""
+"Check this box if you want to enable email rerouting. Uncheck to disable "
+"rerouting."
+msgstr ""
+
+msgid "Email address"
+msgstr ""
+
+msgid "Provide a comma-delimited list of email addresses to pass through."
+msgstr ""
+
+msgid "Append text"
+msgstr ""
+
+msgid ""
+"This text will be appended with the mail body. Leave it blank if you do not "
+"want to append anything."
+msgstr ""
+
+msgid "Append recipient email addresses"
+msgstr ""
+
+msgid ""
+"Check this box if you want to append recipient email addresses at the bottom "
+"of the mail."
+msgstr ""
+
+msgid "Save Changes"
+msgstr ""
+
+msgid "Settings"
+msgstr ""

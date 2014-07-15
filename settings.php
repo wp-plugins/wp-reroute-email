@@ -29,40 +29,40 @@
 ?>
 <div class="wrap">
     <div class="icon32" id="icon-options-general"><br></div>
-    <h2><?php echo __("WP Reroute Email Settings"); ?></h2>
+    <h2><?php  _e('WP Reroute Email Settings', 'wp_reroute_email'); ?></h2>
     <form action="" method="post">
         <table class="form-table">
             <tbody>
                 <tr>
-                    <th scope="row">Enable rerouting</th>
+                    <th scope="row"><?php  _e('Enable rerouting', 'wp_reroute_email'); ?></th>
                     <td>
                         <input type="checkbox" <?php print $enable ? 'checked="checked"' : ''; ?> value="1" name="enable_reroute">
-                        <br><span class="description">Check this box if you want to enable email rerouting. Uncheck to disable rerouting.</span>
+                        <br><span class="description"><?php  _e('Check this box if you want to enable email rerouting. Uncheck to disable rerouting.', 'wp_reroute_email'); ?></span>
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row">Email address</th>
+                    <th scope="row"><?php  _e('Email address', 'wp_reroute_email'); ?></th>
                     <td>
                         <input type="text" name="email_address" size="60" value="<?php print $email; ?>">
-                        <br><span class="description">Provide a comma-delimited list of email addresses to pass through.</span>
+                        <br><span class="description"><?php  _e('Provide a comma-delimited list of email addresses to pass through.', 'wp_reroute_email'); ?></span>
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row">Append text</th>
+                    <th scope="row"><?php  _e('Append text', 'wp_reroute_email'); ?></th>
                     <td>
                         <input type="text" name="append_msg" size="60" value="<?php print $append_msg; ?>">
-                        <br><span class="description">This text will be appended with the mail body. Leave it blank if you do not want to append anything.</span>
+                        <br><span class="description"><?php  _e('This text will be appended with the mail body. Leave it blank if you do not want to append anything.', 'wp_reroute_email'); ?></span>
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row">Append recipient email addresses</th>
+                    <th scope="row"><?php  _e('Append recipient email addresses', 'wp_reroute_email'); ?></th>
                     <td>
                         <input type="checkbox" <?php print $append_recipient ? 'checked="checked"' : ''; ?> value="1" name="append_recipient">
-                        <br><span class="description">Check this box if you want to append recipient email addresses at the bottom of the mail.</span>
+                        <br><span class="description"><?php  _e('Check this box if you want to append recipient email addresses at the bottom of the mail.', 'wp_reroute_email'); ?></span>
                     </td>
                 </tr>
             </tbody>
         </table>
-        <p class="submit"><input type="submit" value="Save Changes"></p>
+        <p class="submit"><input type="submit" value="<?php  _e('Save Changes', 'wp_reroute_email'); ?>"></p>
     </form>
 </div>
