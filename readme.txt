@@ -25,7 +25,7 @@ Any issue? Contact me (http://sajjadhossain.com/contact-me/).
 
 == Changelog ==
 = 1.2.2 =
-* Added Spanish language support. Thanks to Andrew Kurtis.
+* Added Spanish language support. Thanks to Andrew Kurtis of WebHostingHub (http://www.webhostinghub.com/).
 
 = 1.2.1 =
 * Added language support.
