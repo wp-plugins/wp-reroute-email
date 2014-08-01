@@ -8,48 +8,57 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
 
 msgid "Enter at least one email address."
-msgstr ""
+msgstr "Ingrese al menos una dirección de correo electrónico."
 
 msgid "Settings saved."
-msgstr ""
+msgstr "Configuración guardada."
 
 msgid "WP Reroute Email Settings"
-msgstr ""
+msgstr "Configuración de WP Reroute Email "
 
 msgid "Enable rerouting"
-msgstr ""
+msgstr "Habilitar redirección "
 
 msgid ""
 "Check this box if you want to enable email rerouting. Uncheck to disable "
 "rerouting."
 msgstr ""
+"Marque esta casilla si desea habilitar la redirección de email. Desmarque "
+"para desactivar la redirección."
 
 msgid "Email address"
-msgstr ""
+msgstr "Dirección de email"
 
 msgid "Provide a comma-delimited list of email addresses to pass through."
 msgstr ""
+"Proporcionar una lista delimitada por comas de direcciones de email para "
+"utilizar."
 
 msgid "Append text"
-msgstr ""
+msgstr "Anexar texto"
 
 msgid ""
 "This text will be appended with the mail body. Leave it blank if you do not "
 "want to append anything."
 msgstr ""
+"Este texto se adjunta con el cuerpo del correo. Déjelo en blanco si no desea "
+"agregar nada."
 
 msgid "Append recipient email addresses"
-msgstr ""
+msgstr "Anexar direcciones de email del destinatario"
 
 msgid ""
 "Check this box if you want to append recipient email addresses at the bottom "
 "of the mail."
 msgstr ""
+"Marque esta casilla si desea añadir la dirección de email del destinatario "
+"en la parte inferior del mensaje."
 
 msgid "Save Changes"
-msgstr ""
+msgstr "Marque esta casilla si desea añaGuardar Cambios "
 
 msgid "Settings"
-msgstr ""
+msgstr "Configuración"
