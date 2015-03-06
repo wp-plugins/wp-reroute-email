@@ -1,8 +1,8 @@
 === WP Reroute Email ===
-Contributors: Sajjad Hossain
+Contributors: msh134
 Tags: mail, email, developer tool
 Requires at least: 2.2.3
-Tested up to: 3.9.1
+Tested up to: 4.1.1
 Stable tag: 1.2.3
 License: GPLv2 or later
 
