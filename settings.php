@@ -1,9 +1,9 @@
 <?php
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        $enable = !empty($_POST['enable_reroute']) ? 1 : 0;
-        $append_recipient = !empty($_POST['append_recipient']) ? 1 : 0;
-        $email = !empty($_POST['email_address']) ? $_POST['email_address'] : '';
-        $append_msg = !empty($_POST['append_msg']) ? $_POST['append_msg'] : '';
+        $enable = !empty($_POST['enable_reroute']) && sanitize_text_field($_POST['enable_reroute']) ? 1 : 0;
+        $append_recipient = !empty($_POST['append_recipient']) && sanitize_text_field($_POST['append_recipient']) ? 1 : 0;
+        $email = !empty($_POST['email_address']) ? sanitize_text_field($_POST['email_address']) : '';
+        $append_msg = !empty($_POST['append_msg']) ? sanitize_text_field($_POST['append_msg']) : '';
 
         $error = false;
 
