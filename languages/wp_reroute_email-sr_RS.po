@@ -1,0 +1,65 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Borisa Djuraskovic <borisad@webhostinghub.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.4\n"
+"Language: sr_RS\n"
+
+msgid "Enter at least one email address."
+msgstr "Unesite najmanje jednu email adresu."
+
+msgid "Settings saved."
+msgstr "Podešavanja sačuvana."
+
+msgid "WP Reroute Email Settings"
+msgstr "WP Preusmeravanje Podešavanja Email-a"
+
+msgid "Enable rerouting"
+msgstr "Omogućite preusmeravanje"
+
+msgid ""
+"Check this box if you want to enable email rerouting. Uncheck to disable "
+"rerouting."
+msgstr ""
+"Pregledajte ovu pregradu ukoliko želite da omogućite preusmeravanje email-a. "
+"Poništite da biste onemogućili preusmeravanje."
+
+msgid "Email address"
+msgstr "Email adresa"
+
+msgid "Provide a comma-delimited list of email addresses to pass through."
+msgstr ""
+"Obezbedite comma-delimited (“zarezima odvojenu”) listu email adresa za "
+"prolaz."
+
+msgid "Append text"
+msgstr "Dodajte tekst"
+
+msgid ""
+"This text will be appended with the mail body. Leave it blank if you do not "
+"want to append anything."
+msgstr ""
+"Ovaj tekst će biti dodat “telu email-a” (mail body). Ostavite prazno ukoliko "
+"ne želite ništa da dodajete."
+
+msgid "Append recipient email addresses"
+msgstr "Dodajte email adrese primalaca"
+
+msgid ""
+"Check this box if you want to append recipient email addresses at the bottom "
+"of the mail."
+msgstr ""
+"Pregledajte ovu pregradu ukoliko želite da dodate email adrese primalaca u "
+"dnu mail-a."
+
+msgid "Save Changes"
+msgstr "Sačuvajte Promene (Changes)"
+
+msgid "Settings"
+msgstr "Podešavanja"
