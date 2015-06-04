@@ -24,6 +24,9 @@ Any issue? Contact me (http://sajjadhossain.com/contact-me/).
 3. Go to Settings > WP Reroute Email settings page and modify the settings.
 
 == Changelog ==
+= 1.2.5 =
+Added Serbo-Croatian translation. Thanks to Andrijana Nikolic of WebHostingGeeks Support (http://webhostinggeeks.com/).
+
 = 1.2.4 =
 * Sanitized inputs in settings page.
 
