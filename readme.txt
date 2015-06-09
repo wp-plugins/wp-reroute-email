@@ -3,7 +3,7 @@ Contributors: msh134
 Tags: mail, email, developer tool, development server
 Requires at least: 2.2.3
 Tested up to: 4.2.2
-Stable tag: 1.2.4
+Stable tag: 1.2.5
 License: GPLv2 or later
 
 This plugin reroutes all outgoing emails from a WordPress site (sent using the wp_mail() function) to a predefined configurable email address.
